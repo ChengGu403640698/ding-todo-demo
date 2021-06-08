@@ -7,7 +7,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: resolve(__dirname, "src/index.tsx"),
     output: {
-        filename: 'bundle.js',
+        // filename: 'bundle.js',
+        // `filename` provides a template for naming your bundles (remember to use `[name]`)
+        filename: '[name].bundle.js',
+        // `chunkFilename` provides a template for naming code-split bundles (optional)
+        chunkFilename: '[name].bundle.js',
         path: resolve(__dirname, 'dist'),
     },
     mode: 'development',
